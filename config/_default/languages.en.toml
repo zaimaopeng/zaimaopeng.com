@@ -1,0 +1,24 @@
+# -- Language Configuration --
+
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Zaimao Peng"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+
+[params.author]
+  name = "Zaimao Peng (Michael)"
+  image = "img/author.jpg"
+  headline = "Researcher • Innovator • Builder"
+  bio = "Postdoctoral Research Fellow at Monash University. Bridging biomedical research and real-world impact through 3D bioprinting, AI-powered medical devices, and cross-disciplinary collaboration."
+  links = [
+    { email = "mailto:pengzaimao@outlook.com" },
+    { linkedin = "https://linkedin.com/in/zaimao" },
+    { github = "https://github.com/zaimaopeng" },
+    { google-scholar = "https://scholar.google.com/" },
+  ]
