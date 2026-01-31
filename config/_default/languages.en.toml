@@ -13,7 +13,7 @@ title = "Zaimao Peng"
 
 [params.author]
   name = "Zaimao Peng (Michael)"
-  image = "img/author.jpg"
+  image = "https://api.dicebear.com/7.x/initials/svg?seed=ZP&backgroundColor=1e40af"
   headline = "Researcher • Innovator • Builder"
   bio = "Postdoctoral Research Fellow at Monash University. Bridging biomedical research and real-world impact through 3D bioprinting, AI-powered medical devices, and cross-disciplinary collaboration."
   links = [
