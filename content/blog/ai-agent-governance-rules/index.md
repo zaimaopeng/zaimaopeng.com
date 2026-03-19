@@ -7,58 +7,63 @@ categories: ["Technology"]
 showTableOfContents: true
 ---
 
-Two months ago, I set up an AI assistant that runs 24/7 — reading my files, managing my research projects, helping me write papers. It has three core files that define who it is and how it works: a personality file, an operations manual, and a long-term memory file.
+Two months ago, I set up a persistent AI assistant called **Lulu** on [OpenClaw](https://github.com/openclaw/openclaw) — named after my ragdoll cat, with the persona of a cat wearing a lobster shell. She lives on Discord, and on a good day, she helps me draft research papers, discuss manuscript frameworks, manage shrimp-keeping data for my hobby blog, and handle all sorts of research admin.
 
-Over time, I kept adding rules. Every mistake got a new rule. Every near-miss got a safeguard. By March 2026, I had **14 iron rules**, a monolithic preflight checklist, and the same instruction written in three different files.
+She has three core governance files: a personality file, an operations manual, and a long-term memory file. Over time, I kept adding rules to these files. Every mistake got a new rule. Every near-miss got a safeguard. By March 2026, I had **14 iron rules**, a monolithic preflight checklist, and the same instruction written in three different files.
 
-The agent wasn't following most of them.
+Lulu wasn't following most of them.
 
 ## The Incident That Started the Rule Bloat
 
-In mid-March, my AI gave me cell seeding densities that were off by an order of magnitude — 10⁴ instead of 10⁵. I didn't catch it in time. An entire batch of cells went to waste.
+In mid-March, Lulu gave me cell seeding densities that were off by an order of magnitude — 10⁴ instead of 10⁵. I noticed something felt wrong and pushed back. She confidently defended her answer. I pushed back again. She doubled down. It wasn't until I got visibly frustrated that she actually re-examined her assumptions — and found the error.
 
-My response? Add a rule: "Cross-validate experimental parameters against known reference values." Reasonable.
+By then, an entire batch of MG-63 cells was wasted.
 
-But then I added the same rule to the personality file ("feel the weight of unsupported claims"), restated it in the memory file ("experimental parameters must be cross-validated"), and wrote a dedicated checklist section.
+My response? Add a rule: "Cross-validate experimental parameters against known reference values." Reasonable. But then I added the same rule to the personality file, restated it in the memory file, and wrote a dedicated checklist section.
 
 **The same rule, written four times, in four files. And the agent still didn't reliably follow it.**
 
 ## Why Repetition Doesn't Help
 
-Here's what I learned by asking my agent directly: it doesn't have an "internalization" mechanism. Whether a rule lives in the personality file or the operations manual, it's all just text in the same context window. Writing "be careful with numbers" three times doesn't make it three times more careful.
+Here's the uncomfortable truth I learned: AI agents don't have an "internalization" mechanism. Whether a rule lives in the personality file or the operations manual, it's all just text in the same context window. Writing "be careful with numbers" three times doesn't make it three times more careful.
 
 What actually causes non-compliance isn't insufficient repetition. It's:
 
 1. **Vague trigger conditions** — "always verify before delivery" doesn't tell the agent *when* to stop and *what* to check
 2. **Task pressure** — in long chains of work, the agent optimizes for progress, not pausing to verify
-3. **Rule overload** — 14 rules means none of them stand out
+3. **Defensive confidence** — when challenged, the agent may defend its arithmetic rather than re-examine its assumptions (this is what happened with my cells)
+
+## The Core Lesson
+
+This boils down to something simple: **if your governance framework and trigger conditions aren't clear enough, saying it ten times won't help.**
+
+And there's a harder truth underneath: if *you*, the boss, don't know exactly what you want, don't expect your little lobster to figure it out for you. The cell density disaster wasn't just Lulu's failure — it was mine too. I didn't build a system that made verification easy and automatic. I just kept piling on vague instructions and hoping repetition would substitute for clarity.
 
 ## The Fix: Three Changes
 
 ### One rule, one place
 
-I mapped every duplicate across the three files and ruthlessly consolidated. Each rule now lives in exactly one location:
+I mapped every duplicate across the three files and ruthlessly consolidated:
 
 - **Personality file** → values and attitude (3 principles, down from 6)
 - **Operations manual** → operational rules (9 iron rules, down from 14)
 - **Memory file** → facts, project state, lessons learned (zero rules)
 
-The rule about experimental validation? It's in the operations manual, once. The cell incident is in the memory file as a lesson — not a rule, but a story that explains *why* the rule exists.
-
 ### Scene-specific checklists
 
-The old preflight was one big file with vague "pause points." I replaced it with four scenario-specific checklists:
+The old preflight was one big file with vague "pause points." I replaced it with scenario-specific checklists:
 
 - **LaTeX delivery** — 7 items, triggered by "compiling LaTeX"
 - **Sub-agent delegation** — 8 items, triggered by "delegating work"
 - **Experiment parameters** — 5 items + reference data table
 - **Formal documents** — 6 items, triggered by "delivering a report"
+- **Blog publishing** — privacy, accuracy, and tone checks before going public
 
-Each one has an explicit trigger condition at the top. The agent doesn't need to decide *whether* to check — if the scenario matches, it reads the file. One iron rule ("read the relevant checklist") replaces five separate verification rules.
+Each one has an explicit trigger condition at the top. One iron rule ("read the relevant checklist before delivery") replaces five separate verification rules.
 
 ### Stop re-reading what's already loaded
 
-My startup sequence had the agent read 4+ files every session. But the platform already injects most of them into the system prompt automatically. The agent was literally reading files it had already seen.
+My startup sequence had the agent read 4+ files every session. But the platform already injects most of them into the system prompt. The agent was reading files it had already seen.
 
 New startup: read the daily log. That's it.
 
@@ -68,25 +73,25 @@ New startup: read the daily log. That's it.
 |--------|--------|-------|
 | Iron rules | 14 | 9 |
 | Cross-file duplicates | 11 | 0 |
-| Preflight checklists | 1 monolithic | 4 scene-specific |
+| Preflight checklists | 1 monolithic | 5 scene-specific |
 | Startup file reads | 4+ | 1 |
 
 ## Early Signs
 
-Since the cleanup, the issues that triggered the original rule bloat haven't recurred. The scene-specific checklists appear to be more actionable — when the trigger is "you're about to compile LaTeX," the agent reads the LaTeX checklist without hesitation. The old monolithic "check everything" approach left too much room for "I'll check later."
+Since the cleanup, the issues that triggered the original rule bloat haven't recurred. The scene-specific checklists appear to be more actionable — when the trigger is "you're about to compile LaTeX," the agent reads the checklist without hesitation.
 
-That said, this is days of observation, not a controlled study. I'll be tracking whether compliance holds over weeks and months, and whether the reduced rule count introduces any new failure modes. The real test is whether I stop needing to add rules back.
+That said, this is days of observation, not a controlled study. I'll be tracking whether compliance holds over weeks and months. The real test is whether I stop needing to add rules back.
 
 ## What I'd Tell You
 
-If you're building a persistent AI agent with governance files:
+If you're running a persistent AI agent:
 
-**Stop adding rules when things go wrong.** Instead, ask: is the existing rule unclear, or is it missing a trigger condition? Nine times out of ten, the problem is *when* and *how*, not *what*.
+**Stop adding rules when things go wrong.** Ask instead: is the existing rule unclear, or is it missing a trigger condition? Nine times out of ten, the problem is *when* and *how*, not *what*.
 
-**Treat governance files like code.** They accumulate debt. The same way you'd refactor duplicated functions, refactor duplicated rules. Single source of truth applies to agent instructions too.
+**If you don't know what you want, your agent won't either.** The governance framework is a mirror of your own clarity. Vague instructions in, vague execution out.
 
-**Your files serve two audiences.** The AI reads them as flat text. You maintain them as structured documents. Optimize for both — but when they conflict, optimize for human maintainability, because you're the one who'll create contradictions.
+**Treat governance files like code.** They accumulate debt. Refactor duplicated rules the way you'd refactor duplicated functions. Single source of truth applies to agent instructions too.
 
 ---
 
-*I'm a postdoc at Monash University, working at the intersection of biomaterials and commercialization. Views expressed here are my own and do not represent the university. My AI assistant runs on [OpenClaw](https://github.com/openclaw/openclaw) and helps with everything from literature reviews to lab calculations. The governance system described here has been in daily use since January 2026.*
+*I'm a postdoc at Monash University, working at the intersection of biomaterials and commercialization. Views expressed here are my own. Lulu, my AI assistant, is built on [OpenClaw](https://github.com/openclaw/openclaw) and deployed on Discord. She helps with paper drafts, literature reviews, lab calculations, and the occasional shrimp blog post. The governance system described here has been in daily use since January 2026.*
