@@ -13,7 +13,7 @@ title = "Zaimao Peng"
 
 [params.author]
   name = "Zaimao Peng (Michael)"
-  image = "https://api.dicebear.com/7.x/initials/svg?seed=ZP&backgroundColor=1e40af"
+  image = "img/author.jpg"
   headline = "Researcher • Innovator • Builder"
   bio = "Postdoctoral Research Fellow at Monash University. Bridging biomedical research and real-world impact through 3D bioprinting, AI-powered medical devices, and cross-disciplinary collaboration."
   links = [
@@ -21,4 +21,5 @@ title = "Zaimao Peng"
     { linkedin = "https://linkedin.com/in/zaimao" },
     { github = "https://github.com/zaimaopeng" },
     { google-scholar = "https://scholar.google.com/" },
+    { researchgate = "https://www.researchgate.net/profile/Zaimao-Peng" },
   ]

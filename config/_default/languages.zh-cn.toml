@@ -11,7 +11,7 @@ title = "彭再茂"
 
 [params.author]
   name = "彭再茂 (Michael)"
-  image = "https://api.dicebear.com/7.x/initials/svg?seed=ZP&backgroundColor=1e40af"
+  image = "img/author.jpg"
   headline = "科研人 • 创新者 • 造物者"
   bio = "Monash University 博士后研究员。通过 3D 生物打印、AI 赋能医疗设备和跨学科合作，将生物医学研究转化为现实世界的影响力。"
   links = [
@@ -19,4 +19,5 @@ title = "彭再茂"
     { linkedin = "https://linkedin.com/in/zaimao" },
     { github = "https://github.com/zaimaopeng" },
     { google-scholar = "https://scholar.google.com/" },
+    { researchgate = "https://www.researchgate.net/profile/Zaimao-Peng" },
   ]
