@@ -2,7 +2,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "https://zaimaopeng.com/"
+baseURL = "https://www.zaimaopeng.com/"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
