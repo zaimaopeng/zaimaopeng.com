@@ -13,7 +13,7 @@ showTableOfContents: true
 
 ## The Problem
 
-My AI assistant Lulu has access to 120+ knowledge files—daily logs, research notes, department wikis, project records. But when I asked her about "Zn-Mn-Li project progress," she surfaced reagent procurement records. When I asked about "bioink rheology methods," she returned cell culture protocols.
+My AI assistant Lulu has access to 120+ knowledge files—daily logs, research notes, department wikis, project records. But when I asked her about "biodegradable alloy project progress," she surfaced reagent procurement records. When I asked about "biomaterial characterization methods," she returned cell culture protocols.
 
 The information was there. The search just couldn't find it.
 
@@ -57,7 +57,7 @@ I added a natural-language description to the top of each file—one sentence ex
 
 ```markdown
 <!-- auto-anchor-v1 -->
-> This document answers: What is the current status of the Zn-Mn-Li project? 
+> This document answers: What is the current status of the biodegradable alloy project? 
 > What experiments have been completed? What are the next steps?
 <!-- auto-anchor-v1 -->
 ```
