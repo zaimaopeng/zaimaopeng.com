@@ -66,9 +66,14 @@ As both architect and user, I'm constantly iterating:
 | **Custom Skills** | 12 |
 | **Tasks Completed** | 247+ |
 
-*Last updated: 27 March 2026*
+*Last updated: 31 March 2026*
 
 ## Recent Changelog {#changelog}
+
+**31 March 2026 — LuluClaw Open-Sourced**
+- Published governance architecture as [LuluClaw-public](https://github.com/zaimaopeng/LuluClaw-public) (MIT)
+- Includes: SOUL/AGENTS/MEMORY, department structures, skills, handoff protocol, preflight checklists
+- [Blog post: The story behind the decision](/blog/luluclaw-open-source/)
 
 **27 March 2026 — Project Dashboard Interactive**
 - Data-driven architecture: HTML template + JSON separation
@@ -115,7 +120,22 @@ Lulu is a living system. She evolves through daily use, weekly maintenance, and 
 
 **Want to follow along?**
 - [Blog posts tagged #OpenClaw](/tags/openclaw/)
-- [GitHub (selected components)](https://github.com/zaimaopeng)
+- [GitHub — LuluClaw-public](https://github.com/zaimaopeng/LuluClaw-public)
+
+---
+
+## Open Source {#open-source}
+
+On **31 March 2026**, I open-sourced the governance architecture powering Lulu under the name **LuluClaw**.
+
+The repository contains everything that makes this system personal and functional: the soul files, memory architecture, department knowledge bases, operational protocols, skill definitions, handoff review system, and preflight checklists. Two months of iteration, distilled into a reusable structure.
+
+What's *not* included: private data, API keys, conversation logs, or anything that identifies me beyond the working structure itself.
+
+**Why publish it?** Because when I was building this, the most useful thing would have been seeing how a real, used, iterated-on agent governance system is actually structured — not an idealized example, but the real one. So that's what I shared.
+
+→ **[LuluClaw on GitHub](https://github.com/zaimaopeng/LuluClaw-public)**  
+→ **[The story behind the decision](/blog/luluclaw-open-source/)**
 
 ---
 
