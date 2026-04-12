@@ -1,6 +1,7 @@
 ---
 title: "From Book Clothing to Protective Cases: Why Humanity Has Always Tried So Hard to Protect Books"
-date: 2026-04-13
+date: 2026-04-12T15:30:00Z
+lastmod: 2026-04-12T15:30:00Z
 description: "From Chinese shuyi and fitted cases to medieval European wooden boards and clasps, different civilizations were protecting not just books, but knowledge moving through time."
 tags: ["Reading", "History", "Knowledge", "Writing"]
 categories: ["Culture"]
