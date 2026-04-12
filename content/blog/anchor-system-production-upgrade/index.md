@@ -1,10 +1,12 @@
 ---
 title: "When Good Notes Stop Being Searchable: Why I Built an Anchor System for My AI Memory"
-date: 2026-04-13
+date: 2026-04-13T03:25:00+10:00
+lastmod: 2026-04-13T03:25:00+10:00
 description: "As my AI-assisted workspace grew, I realized that having good notes was no longer enough. The real problem was retrieval. This is the story of why I built an anchor system, why the first version broke, and how we rebuilt it into a resumable production pipeline."
 tags: ["OpenClaw", "AI", "Ollama", "Memory", "Search", "Infrastructure", "Automation"]
 categories: ["Technology"]
 showTableOfContents: true
+slug: "anchor-system-production-upgrade"
 ---
 
 # When Good Notes Stop Being Searchable: Why I Built an Anchor System for My AI Memory

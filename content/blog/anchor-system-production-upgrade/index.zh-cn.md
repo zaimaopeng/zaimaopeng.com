@@ -1,10 +1,12 @@
 ---
 title: "知识越积越多，为什么检索反而会越来越差"
-date: 2026-04-13
+date: 2026-04-13T03:25:00+10:00
+lastmod: 2026-04-13T03:25:00+10:00
 description: "最近我一直在升级 OpenClaw 的记忆检索系统。真正的问题不是知识能不能继续增加，而是知识增加之后，检索负担会不会一起增加，性能会不会一起下降。Anchor 是我越来越确认的一层必要结构，但它本身也必须能被持续维护。这篇文章写的是，我为什么会开始做 Anchor，为什么上一轮没有真正跑通，以及这一次我怎么把它做成了一个能持续运行的系统。"
 tags: ["OpenClaw", "记忆系统", "检索", "Anchor", "Ollama", "自动化", "基础设施"]
 categories: ["技术"]
 showTableOfContents: false
+slug: "anchor-system-production-upgrade"
 ---
 
 # 知识越积越多，为什么检索反而会越来越差
