@@ -1,15 +1,19 @@
 ---
 title: "What Three Real Blog Runs Taught Me About Making an AI Writing Workflow Actually Reliable"
 date: 2026-04-22T22:55:00+10:00
-description: "Three real end-to-end publishing runs taught me that AI writing workflows become trustworthy through repeatability and hardening, not through one lucky pass."
+description: "I built my AI writing workflow because real OpenClaw work kept turning into public stories, but only repeated publishing runs showed where the workflow was still faking reliability."
 tags: ["AI workflow", "blogging", "automation", "validation", "systems"]
 categories: ["AI Systems", "Workflow"]
 showTableOfContents: true
 ---
 
-The most important part of building an AI writing workflow was not getting one article published.
+I did not build this AI writing workflow because I needed another way to generate text.
 
-It was discovering what broke on the second and third runs.
+The real problem was that my OpenClaw work kept producing publishable stories, but the path from "this project taught me something" to "this is safely live on the blog" was still too easy to fake. A draft could exist. A file could be synced. A command could succeed. None of that guaranteed that the article was actually ready, visible, and verified.
+
+The purpose of the project was to make that path repeatable: topic selection, production draft, revision, repo sync, local checks, publishing, and live verification.
+
+The most important part was not getting one article published. It was discovering what broke on the second and third runs.
 
 That distinction matters more than it first appears. A workflow that succeeds once can still be fragile, overfit, or quietly dependent on luck. A workflow that survives repeated live use starts becoming infrastructure.
 
