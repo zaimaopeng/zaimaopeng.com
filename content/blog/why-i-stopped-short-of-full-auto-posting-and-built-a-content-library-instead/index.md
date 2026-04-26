@@ -1,17 +1,23 @@
 ---
 title: "Why I Stopped Short of Full Auto-Posting and Built a Content Library Instead"
-date: 2026-04-22T22:57:00+10:00
+date: 2026-04-26T21:15:00+10:00
+lastmod: 2026-04-26T21:15:00+10:00
 description: "I built an X posting workflow because good hooks kept getting lost after blog publication, but the real lesson was that a reviewed content library was safer and more useful than direct auto-posting."
 tags: ["automation", "content systems", "X", "workflow", "publishing"]
 categories: ["AI Systems", "Content"]
-aliases:
-  - /blog/content-library-over-auto-posting/
 showTableOfContents: true
 ---
 
-I started building the X posting workflow because a frustrating thing kept happening after I published longer blog posts.
 
-Each article contained small hooks, claims, and mini-stories that could work well on X, but they were easy to lose once the main post was finished. I did not want to reread every article from scratch whenever I wanted to share it. The goal was to turn approved blog material into reusable short-form candidates without making the public timeline depend on my memory.
+<!-- auto-anchor-v1 -->
+> **Hypothetical queries:** Why switch from auto-posting to a content library? | Benefits of a reviewed content library over auto-posting | How to build a content library for X posting | Risks of short-form content on X | Automation in content publishing: content library vs auto-posting | Why a content queue is better than auto-posting | Creating reusable content for X: best practices | Automation value in content workflows: content library insights
+<!-- auto-anchor-v1 -->
+
+I started building the X posting workflow after noticing a pattern in my own publishing sessions.
+
+After I shipped a long post, I would often realize that the best short-form material was buried inside it: one sharp claim, one small failure story, one line that could carry the whole argument on X. But once the main article was done, those fragments started disappearing into the archive. When I wanted to post later, I had to reread my own work and rediscover the angle from scratch.
+
+The goal was not to make AI casually post for me. It was to turn already-approved blog material into reusable short-form candidates without making the public timeline depend on my memory.
 
 At first, the obvious next step looked like direct auto-posting.
 
