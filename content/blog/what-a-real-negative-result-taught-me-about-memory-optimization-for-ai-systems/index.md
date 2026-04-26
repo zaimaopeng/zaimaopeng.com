@@ -1,17 +1,23 @@
 ---
 title: "What a Real Negative Result Taught Me About Memory Optimization for AI Systems"
-date: 2026-04-22T22:56:00+10:00
+date: 2026-04-26T21:15:00+10:00
+lastmod: 2026-04-26T21:15:00+10:00
 description: "I started a real memory-optimization project to make my personal-agent retrieval more trustworthy, and the most useful outcome was a negative result that exposed the real bottleneck."
 tags: ["AI memory", "negative results", "automation", "research workflow", "evaluation"]
 categories: ["AI Systems", "Research"]
-aliases:
-  - /blog/memory-optimization-negative-result/
 showTableOfContents: true
 ---
 
-I started this memory-optimization project because my personal agent memory was becoming just good enough to be dangerous.
 
-It could retrieve some things well enough to feel useful, but I could not trust whether an apparent improvement was real or just a lucky surface change. The practical goal was simple: repair the benchmark, make the evaluator match the live runtime, and find a way to lift retrieval quality in a system I actually use.
+<!-- auto-anchor-v1 -->
+> **Hypothetical queries:** What lessons did a negative result teach about AI memory optimization? | How does structural competition affect retrieval quality in AI systems? | Why are negative results valuable in AI system research? | What's the role of benchmark repair in memory optimization projects? | How to identify structural retrieval bottlenecks in personal agents? | What did the negative result reveal about memory surface competition? | How does evaluator compatibility impact memory optimization outcomes? | What's the significance of negative results in AI research workflows?
+<!-- auto-anchor-v1 -->
+
+I started this memory-optimization project because my personal agent memory had reached an uncomfortable stage in daily use: it could find enough of my old work, decisions, and project context to feel useful, but not consistently enough for me to fully trust it.
+
+That is a tricky place to be. When memory retrieval works, it feels almost intelligent; when it fails, it is easy to rationalize the miss as a wording problem or a messy note. I did not want a prettier demo. I wanted to know whether the system was actually getting better.
+
+The practical goal was simple: repair the benchmark, make the evaluator match the live runtime, and find a way to lift retrieval quality in a system I actually use every day.
 
 The hard part was that the cleaner the measurement became, the less flattering the result looked.
 

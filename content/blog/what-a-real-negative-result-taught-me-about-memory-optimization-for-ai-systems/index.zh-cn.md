@@ -1,17 +1,23 @@
 ---
 title: "一个真实的负结果，怎样改变了我对 AI memory optimization 的判断"
-date: 2026-04-22T22:56:00+10:00
+date: 2026-04-26T21:15:00+10:00
+lastmod: 2026-04-26T21:15:00+10:00
 description: "我做这个 memory optimization 项目，本来是想让 personal-agent retrieval 更可信，结果最有价值的收获反而是一个暴露真实瓶颈的负结果。"
 tags: ["AI memory", "negative results", "automation", "research workflow", "evaluation"]
 categories: ["AI Systems", "Research"]
-aliases:
-  - /blog/memory-optimization-negative-result/
 showTableOfContents: true
 ---
 
-我开始做这个 memory optimization 项目，是因为自己的 personal agent memory 已经到了一个有点危险的阶段。
 
-它能找回一些东西，已经足够有用；但我还不能完全判断，一个看起来变好的结果，到底是真正的 retrieval improvement，还是刚好撞上了某种表层运气。这个项目最初的目的很朴素：修 benchmark，让 evaluator 真正对齐 live runtime，然后看看能不能把我每天实际使用的 memory retrieval 往上推一截。
+<!-- auto-anchor-v1 -->
+> **Hypothetical queries:** AI memory optimization 负结果分析 | 真实负结果如何改变 AI memory 优化策略 | AI memory retrieval 竞争结构解析 | benchmark 优化如何影响 AI memory 评估 | 负结果揭示的 AI memory 瓶颈 | AI 系统优化中负结果的价值 | memory surface 结构性竞争案例研究 | 如何通过负结果改进 AI memory 评估
+<!-- auto-anchor-v1 -->
+
+我开始做这个 memory optimization 项目，不是因为想写一个漂亮的 benchmark 故事，而是因为自己的 personal agent memory 已经到了一个有点尴尬的阶段：它能把我过去做过的项目、决策和上下文找回来，足够让我愿意依赖它；但它又没有稳定到让我放心把判断完全交给它。
+
+这种状态其实很危险。memory 偶尔表现得很聪明时，人很容易高估它；它漏掉东西时，又很容易把问题归因成 wording 不够好、笔记不够整齐。我不想只做一个看起来更漂亮的 demo，而是想知道系统到底有没有真的变好。
+
+这个项目最初的目的很朴素：修 benchmark，让 evaluator 真正对齐 live runtime，然后看看能不能把我每天实际使用的 memory retrieval 往上推一截。
 
 真正难受的地方在于，measurement 越干净，结果反而越不漂亮。
 
