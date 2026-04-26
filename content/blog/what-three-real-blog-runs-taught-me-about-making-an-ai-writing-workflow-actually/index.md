@@ -1,15 +1,23 @@
 ---
 title: "What Three Real Blog Runs Taught Me About Making an AI Writing Workflow Actually Reliable"
-date: 2026-04-22T22:55:00+10:00
+date: 2026-04-26T21:15:00+10:00
+lastmod: 2026-04-26T21:15:00+10:00
 description: "I built my AI writing workflow because real OpenClaw work kept turning into public stories, but only repeated publishing runs showed where the workflow was still faking reliability."
 tags: ["AI workflow", "blogging", "automation", "validation", "systems"]
 categories: ["AI Systems", "Workflow"]
 showTableOfContents: true
 ---
 
+
+<!-- auto-anchor-v1 -->
+> **Hypothetical queries:** lessons from three real blog runs on AI workflow reliability | how to make an AI writing workflow actually reliable | challenges in validating AI workflows through repeated runs | OpenClaw workflow issues discovered during repeated publishing | transitioning AI workflows from demo to infrastructure | checker logic problems in AI blog publishing workflows | reliable AI workflow: lessons from three live blog runs | workflow state vocabulary for real AI publishing systems
+<!-- auto-anchor-v1 -->
+
 I did not build this AI writing workflow because I needed another way to generate text.
 
-The real problem was that my OpenClaw work kept producing publishable stories, but the path from "this project taught me something" to "this is safely live on the blog" was still too easy to fake. A draft could exist. A file could be synced. A command could succeed. None of that guaranteed that the article was actually ready, visible, and verified.
+The real trigger was more concrete: OpenClaw had started producing actual project stories faster than I could safely turn them into public writing. A deep-work workflow, a skill-path repair, a memory-optimization result, a publishing fix. Each one had a lesson worth writing down, but the path from "this project taught me something" to "this is safely live on the blog" was still too easy to fake.
+
+A draft could exist. A file could be synced. A command could succeed. None of that guaranteed that the article was actually ready, visible, and verified.
 
 The purpose of the project was to make that path repeatable: topic selection, production draft, revision, repo sync, local checks, publishing, and live verification.
 
