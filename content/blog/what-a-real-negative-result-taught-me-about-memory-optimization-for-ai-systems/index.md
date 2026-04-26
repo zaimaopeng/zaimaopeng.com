@@ -4,6 +4,8 @@ date: 2026-04-22T22:56:00+10:00
 description: "I started a real memory-optimization project to make my personal-agent retrieval more trustworthy, and the most useful outcome was a negative result that exposed the real bottleneck."
 tags: ["AI memory", "negative results", "automation", "research workflow", "evaluation"]
 categories: ["AI Systems", "Research"]
+aliases:
+  - /blog/memory-optimization-negative-result/
 showTableOfContents: true
 ---
 

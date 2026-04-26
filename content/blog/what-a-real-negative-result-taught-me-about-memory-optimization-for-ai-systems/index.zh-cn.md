@@ -4,6 +4,8 @@ date: 2026-04-22T22:56:00+10:00
 description: "我做这个 memory optimization 项目，本来是想让 personal-agent retrieval 更可信，结果最有价值的收获反而是一个暴露真实瓶颈的负结果。"
 tags: ["AI memory", "negative results", "automation", "research workflow", "evaluation"]
 categories: ["AI Systems", "Research"]
+aliases:
+  - /blog/memory-optimization-negative-result/
 showTableOfContents: true
 ---
 

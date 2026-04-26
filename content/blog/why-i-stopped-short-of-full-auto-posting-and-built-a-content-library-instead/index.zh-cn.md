@@ -4,6 +4,8 @@ date: 2026-04-22T22:57:00+10:00
 description: "我做 X 发帖自动化，是因为博客发布后很多小 hook 总会流失；真正跑起来之后，我发现 reviewed content library 比 direct auto-posting 更有价值。"
 tags: ["automation", "content systems", "X", "workflow", "publishing"]
 categories: ["AI Systems", "Content"]
+aliases:
+  - /blog/content-library-over-auto-posting/
 showTableOfContents: true
 ---
 

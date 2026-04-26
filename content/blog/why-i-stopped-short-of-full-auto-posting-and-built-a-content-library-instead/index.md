@@ -4,6 +4,8 @@ date: 2026-04-22T22:57:00+10:00
 description: "I built an X posting workflow because good hooks kept getting lost after blog publication, but the real lesson was that a reviewed content library was safer and more useful than direct auto-posting."
 tags: ["automation", "content systems", "X", "workflow", "publishing"]
 categories: ["AI Systems", "Content"]
+aliases:
+  - /blog/content-library-over-auto-posting/
 showTableOfContents: true
 ---
 
