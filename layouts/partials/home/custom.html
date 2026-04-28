@@ -1,0 +1,105 @@
+{{ $isZh := eq .Site.Language.Lang "zh-cn" }}
+{{ $posts := where .Site.RegularPages "Section" "blog" }}
+{{ $latest := first (.Site.Params.homepage.showRecentItems | default 7) $posts }}
+{{ $featured := false }}
+{{ with $latest }}
+  {{ $featured = index . 0 }}
+{{ end }}
+
+<div class="blog-home">
+  <section class="blog-home__intro" aria-labelledby="home-title">
+    <div class="blog-home__copy">
+      <p class="blog-home__eyebrow">{{ if $isZh }}个人 Studio{{ else }}Personal studio{{ end }}</p>
+      <h1 id="home-title">
+        {{ if $isZh }}彭在茂的 Studio{{ else }}Zaimao Peng Studio{{ end }}
+      </h1>
+      <div class="blog-home__lede">
+        {{ .Content }}
+      </div>
+      <div class="blog-home__actions" aria-label="{{ if $isZh }}主要链接{{ else }}Primary links{{ end }}">
+        <a class="blog-home__primary-link" href="{{ "blog/" | relLangURL }}">
+          {{ if $isZh }}阅读最新文章{{ else }}Read the latest posts{{ end }}
+        </a>
+        <a class="blog-home__secondary-link" href="{{ "about/" | relLangURL }}">
+          {{ if $isZh }}关于作者{{ else }}About the author{{ end }}
+        </a>
+      </div>
+    </div>
+
+    <aside class="blog-home__profile" aria-label="{{ if $isZh }}作者简介{{ else }}Author profile{{ end }}">
+      {{ with .Site.Params.Author.image }}
+        {{ $authorImage := resources.Get . }}
+        {{ with $authorImage }}
+          {{ $avatar := .Fill "192x192 q92" }}
+          <img
+            class="blog-home__avatar"
+            width="96"
+            height="96"
+            alt="{{ $.Site.Params.Author.name | default $.Site.Title }}"
+            src="{{ $avatar.RelPermalink }}">
+        {{ end }}
+      {{ end }}
+      <div>
+        <p class="blog-home__name">{{ .Site.Params.Author.name | default .Site.Title }}</p>
+        {{ with .Site.Params.Author.headline }}
+          <p class="blog-home__headline">{{ . | markdownify }}</p>
+        {{ end }}
+      </div>
+      <div class="blog-home__meta">
+        <span>{{ len $posts }} {{ if $isZh }}篇文章{{ else }}posts{{ end }}</span>
+        <span>{{ if $isZh }}Studio / Brand / 写作{{ else }}Studio / brand / writing{{ end }}</span>
+      </div>
+    </aside>
+  </section>
+
+  {{ with $featured }}
+    <section class="blog-home__featured" aria-labelledby="featured-title">
+      <div class="blog-home__section-heading">
+        <p>{{ if $isZh }}最新更新{{ else }}Latest update{{ end }}</p>
+        <a href="{{ "blog/" | relLangURL }}">{{ if $isZh }}全部文章{{ else }}All posts{{ end }}</a>
+      </div>
+      <article class="blog-home__featured-article">
+        <div class="blog-home__article-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+          {{ if gt .ReadingTime 0 }}
+            <span>{{ .ReadingTime }} {{ if $isZh }}分钟阅读{{ else }}min read{{ end }}</span>
+          {{ end }}
+        </div>
+        <h2 id="featured-title">
+          <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
+        </h2>
+        {{ with .Params.description }}
+          <p>{{ . }}</p>
+        {{ else }}
+          <p>{{ .Summary | plainify }}</p>
+        {{ end }}
+      </article>
+    </section>
+  {{ end }}
+
+  {{ if gt (len $latest) 1 }}
+    <section class="blog-home__latest" aria-labelledby="latest-title">
+      <h2 id="latest-title">{{ if $isZh }}最近文章{{ else }}Recent writing{{ end }}</h2>
+      <div class="blog-home__post-list">
+        {{ range after 1 $latest }}
+          <article class="blog-home__post">
+            <div class="blog-home__article-meta">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+              {{ with .GetTerms "categories" }}
+                {{ with index . 0 }}
+                  <span>{{ .LinkTitle }}</span>
+                {{ end }}
+              {{ end }}
+            </div>
+            <h3>
+              <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
+            </h3>
+            {{ with .Params.description }}
+              <p>{{ . }}</p>
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</div>

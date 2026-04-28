@@ -1,18 +1,17 @@
 ---
 title: "Contact"
-description: "Let's connect!"
+description: "Ways to reach Zaimao Peng."
+layout: "simple"
+showBreadcrumbs: false
 showDate: false
 showAuthor: false
 showReadingTime: false
+sharingLinks: false
 ---
 
 ## Get in Touch
 
-I'm always happy to chat about:
-- Research collaborations
-- Speaking opportunities
-- Interesting projects
-- Or just to say hi!
+This site is my personal studio and brand surface. For formal employment history, please use LinkedIn. For personal projects, writing, or public experiments, the links below are the best places to start.
 
 ## Find Me Online
 
@@ -20,10 +19,6 @@ I'm always happy to chat about:
 - 💼 **LinkedIn**: [linkedin.com/in/zaimao](https://linkedin.com/in/zaimao)
 - 🐙 **GitHub**: [github.com/zaimaopeng](https://github.com/zaimaopeng)
 
-## Based In
+## Note
 
-📍 Melbourne, Australia (AEST/AEDT timezone)
-
----
-
-*I typically respond within 24-48 hours. Looking forward to hearing from you!*
+I keep this site separate from my formal employment identity, so I do not list detailed work history here.

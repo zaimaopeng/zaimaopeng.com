@@ -6,7 +6,7 @@ baseURL = "https://www.zaimaopeng.com/"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
-summaryLength = 0
+summaryLength = 36
 
 buildDrafts = false
 buildFuture = false

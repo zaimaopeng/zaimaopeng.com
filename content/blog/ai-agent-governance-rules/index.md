@@ -1,6 +1,7 @@
 ---
 title: "I Had 14 Rules for My AI Agent. Most Were Useless."
-date: 2026-03-19
+date: 2026-03-19T09:30:00+10:00
+lastmod: 2026-03-19T09:30:00+10:00
 description: "How I went from governance bloat to a system that actually works — lessons from two months of running a persistent AI assistant."
 tags: ["AI", "Workflow", "Productivity", "Agent"]
 categories: ["Technology"]
@@ -94,4 +95,4 @@ If you're running a persistent AI agent:
 
 ---
 
-*I'm a postdoc at Monash University, working at the intersection of biomaterials and commercialization. Views expressed here are my own. Lulu, my AI assistant, is built on [OpenClaw](https://github.com/openclaw/openclaw) and deployed on Discord. She helps with paper drafts, literature reviews, lab calculations, and the occasional shrimp blog post. The governance system described here has been in daily use since January 2026.*
+*This is a personal studio note from Zaimao Peng. Formal employment history lives on [LinkedIn](https://linkedin.com/in/zaimao). The system described here is part of my independent AI and writing experiments.*

@@ -1,37 +1,27 @@
 ---
-title: "关于我"
-description: "了解我是谁，以及驱动我的力量"
+title: "关于"
+description: "关于这个个人 studio 和个人 brand 的简短说明。"
+layout: "simple"
+showBreadcrumbs: false
 showDate: false
 showAuthor: false
 showReadingTime: false
 showTableOfContents: true
+sharingLinks: false
 ---
 
-## 你好，我是 Michael 👋
+## 你好，我是 Michael
 
-我叫**彭再茂**，朋友们叫我 Michael。目前在 Monash University 做博士后，研究方向横跨生物医学工程、材料科学和新兴技术。
+我叫**彭在茂**。这个网站不是正式简历，也不是正式工作档案。它更像是我的个人 studio：放一些文章、实验、小型公开项目，以及我想以自己名字持续打磨的想法。
 
-## 我在做什么
+## 这个网站是什么
 
-我的工作涵盖：
+- **写作入口**：放 essays、notes 和一些阶段性思考。
+- **Studio shelf**：放独立项目、实验和公开痕迹。
+- **个人 brand 主页**：和正式工作身份保持一定距离。
 
-- **3D 生物打印** — 开发先进的生物墨水和打印策略，用于组织工程
-- **流变学表征** — 复杂流体行为专家（我负责培训 Anton Paar MCR702e！）
-- **AI 医疗** — CranioSwift 项目：AI 驱动的颅骨植入物设计
-- **跨学科协作** — 连接学术界、产业界和国际合作伙伴
+如果你想了解我的正式工作经历、机构身份或职业时间线，LinkedIn 会是更合适的入口。
 
-## 我的经历
+## 联系
 
-出生于中国，通过 Monash-中南大学联合培养项目在两个大洲接受教育。我扮演过很多角色：研究员、培训师、协调人、导师——现在，我是一个造物者。
-
-## 实验室之外
-
-不在实验室的时候，你可能会看到我在：
-- 🐱 和我的布偶猫露露玩耍
-- 📚 阅读科技和创业相关的内容
-- 🌏 探索东西方文化交汇处的想法
-- 🛠️ 做副业项目、学习新技能
-
-## 联系我
-
-我始终欢迎合作、交流和新想法。随时联系我！
+你可以从 [博客](/zh-cn/blog/) 开始看我的公开写作。正式背景请看 [LinkedIn](https://linkedin.com/in/zaimao)。代码和公开项目痕迹可以看 [GitHub](https://github.com/zaimaopeng)。

@@ -100,4 +100,4 @@ In the age of AI, the second one is worth more.
 
 ---
 
-*Zaimao Peng is a Postdoctoral Research Fellow at Monash University, working on biomaterials and 3D bioprinting. He is also a heavy user and observer of AI tools. Views are his own.*
+*This is a personal studio note from Zaimao Peng. Formal employment history lives on [LinkedIn](https://linkedin.com/in/zaimao).*

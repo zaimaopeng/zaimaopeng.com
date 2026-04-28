@@ -1,13 +1,13 @@
 ---
 title: "Blog"
-description: "Thoughts, learnings, and explorations"
+description: "Essays and notes from Zaimao Peng's personal studio."
 cascade:
   showDate: true
   showAuthor: true
   showReadingTime: true
   showTableOfContents: true
-  showHero: true
+  showHero: false
   heroStyle: "basic"
 ---
 
-Writing helps me think. Here I share my thoughts on research, technology, career, and life.
+Essays and notes from my personal studio: AI, writing, tools, systems, and the small observations that become clearer when I try to make things in public.

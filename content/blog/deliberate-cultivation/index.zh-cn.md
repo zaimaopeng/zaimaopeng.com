@@ -99,4 +99,4 @@ AI 平权的真实意义，也许不是"消除差距"，而是**移动了入场�
 
 ---
 
-*Zaimao Peng 是 Monash University 的博士后研究员，研究方向为生物材料与 3D 打印。同时也是 AI 工具的重度使用者和观察者。文中观点仅代表个人。*
+*这是彭在茂的一篇个人 studio 记录。正式工作经历请看 [LinkedIn](https://linkedin.com/in/zaimao)。*

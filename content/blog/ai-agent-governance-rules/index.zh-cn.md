@@ -1,6 +1,7 @@
 ---
 title: "我给 AI 助手定了 14 条规矩，大部分没用"
-date: 2026-03-19
+date: 2026-03-19T09:30:00+10:00
+lastmod: 2026-03-19T09:30:00+10:00
 description: "从规则膨胀到真正有效的治理体系——两个月运行持久化 AI 助手的教训"
 tags: ["AI", "工作流", "效率", "Agent"]
 categories: ["技术"]
@@ -94,4 +95,4 @@ showTableOfContents: true
 
 ---
 
-*我是 Monash University 的博士后，研究方向是生物材料与商业化的交叉领域。本文观点仅代表个人。Lulu 是我基于 [OpenClaw](https://github.com/openclaw/openclaw) 搭建的 AI 助手，部署在 Discord 上，协助我完成论文草稿、文献综述、实验计算，偶尔还帮我写养虾博客。这套治理体系自 2026 年 1 月起每日使用。*
+*这是彭在茂的一篇个人 studio 记录。正式工作经历请看 [LinkedIn](https://linkedin.com/in/zaimao)。文中系统属于我的独立 AI 与写作实验。*

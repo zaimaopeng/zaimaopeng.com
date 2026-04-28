@@ -1,37 +1,27 @@
 ---
-title: "About Me"
-description: "Get to know who I am and what drives me"
+title: "About"
+description: "A short note on this personal studio and brand."
+layout: "simple"
+showBreadcrumbs: false
 showDate: false
 showAuthor: false
 showReadingTime: false
 showTableOfContents: true
+sharingLinks: false
 ---
 
-## Hi, I'm Michael 👋
+## Hi, I'm Michael
 
-I'm **Zaimao Peng (彭在茂)**, but most people call me Michael. I'm a Postdoctoral Research Fellow at Monash University, working at the intersection of biomedical engineering, materials science, and emerging technologies.
+I'm **Zaimao Peng (彭在茂)**. This site is not meant to be a formal resume or employment profile. It is closer to a personal studio: a place for writing, experiments, small public projects, and the ideas I want to keep shaping under my own name.
 
-## What I Do
+## What This Site Is
 
-My work spans across:
+- **A writing surface** for essays, notes, and reflections.
+- **A studio shelf** for independent projects and experiments.
+- **A personal brand home** that stays separate from my formal employment identity.
 
-- **3D Bioprinting** — Developing advanced bioinks and printing strategies for tissue engineering
-- **Rheological Characterization** — Expert in complex fluid behavior (I train people on the Anton Paar MCR702e!)
-- **AI in Healthcare** — CranioSwift project: AI-powered cranial implant design
-- **Cross-disciplinary Collaboration** — Bridging academia, industry, and international partnerships
+If you want my official employment history, institutional affiliations, or professional timeline, LinkedIn is the better place for that.
 
-## My Journey
+## Connect
 
-Born in China, educated across two continents through the Monash-Central South University joint program. I've worn many hats: researcher, trainer, coordinator, mentor, and now — builder of things that matter.
-
-## Beyond the Lab
-
-When I'm not in the lab, you'll find me:
-- 🐱 Hanging out with my ragdoll cat Lulu
-- 📚 Reading about technology and entrepreneurship
-- 🌏 Exploring ideas at the intersection of East and West
-- 🛠️ Building side projects and learning new skills
-
-## Let's Connect
-
-I'm always interested in collaborations, conversations, and new ideas. Feel free to reach out!
+You can follow the writing through the [Blog](/blog/). For formal background, see [LinkedIn](https://linkedin.com/in/zaimao). For code and public project traces, see [GitHub](https://github.com/zaimaopeng).

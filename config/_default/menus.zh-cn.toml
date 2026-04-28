@@ -1,22 +1,12 @@
 [[main]]
-  name = "关于"
-  pageRef = "about"
+  name = "博客"
+  pageRef = "blog"
   weight = 10
 
 [[main]]
-  name = "项目"
-  pageRef = "projects"
+  name = "关于"
+  pageRef = "about"
   weight = 20
-
-[[main]]
-  name = "博客"
-  pageRef = "blog"
-  weight = 30
-
-[[main]]
-  name = "联系"
-  pageRef = "contact"
-  weight = 40
 
 [[footer]]
   name = "LinkedIn"

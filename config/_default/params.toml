@@ -7,9 +7,11 @@ autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
+disableTextInHeader = false
+mainSections = ["blog"]
 
 [header]
-  layout = "fixed"
+  layout = "basic"
 
 [footer]
   showMenu = true
@@ -19,19 +21,19 @@ enableCodeCopy = true
   showScrollToTop = true
 
 [homepage]
-  layout = "profile"
-  showRecent = true
-  showRecentItems = 6
+  layout = "custom"
+  showRecent = false
+  showRecentItems = 7
   showMoreLink = true
   showMoreLinkDest = "/blog/"
-  cardView = true
+  cardView = false
   cardViewScreenWidth = false
 
 [article]
   showDate = true
   showAuthor = true
-  showHero = true
-  heroStyle = "big"
+  showHero = false
+  heroStyle = "basic"
   showBreadcrumbs = true
   showReadingTime = true
   showTableOfContents = true
@@ -40,13 +42,14 @@ enableCodeCopy = true
   sharingLinks = ["linkedin", "twitter", "email"]
 
 [list]
-  showHero = true
-  heroStyle = "background"
+  showHero = false
+  heroStyle = "basic"
   showBreadcrumbs = true
   showSummary = true
-  showCards = true
-  cardView = true
+  showCards = false
+  cardView = false
   groupByYear = false
+  constrainItemsWidth = true
 
 [taxonomy]
   showTermCount = true

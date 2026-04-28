@@ -1,24 +1,14 @@
 # -- Main Menu --
 
 [[main]]
-  name = "About"
-  pageRef = "about"
+  name = "Blog"
+  pageRef = "blog"
   weight = 10
 
 [[main]]
-  name = "Projects"
-  pageRef = "projects"
+  name = "About"
+  pageRef = "about"
   weight = 20
-
-[[main]]
-  name = "Blog"
-  pageRef = "blog"
-  weight = 30
-
-[[main]]
-  name = "Contact"
-  pageRef = "contact"
-  weight = 40
 
 # -- Footer Menu --
 

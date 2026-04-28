@@ -14,12 +14,10 @@ title = "Zaimao Peng"
 [params.author]
   name = "Zaimao Peng (Michael)"
   image = "img/author.jpg"
-  headline = "Researcher • Innovator • Builder"
-  bio = "Postdoctoral Research Fellow at Monash University. Bridging biomedical research and real-world impact through 3D bioprinting, AI-powered medical devices, and cross-disciplinary collaboration."
+  headline = "Personal studio • Writing • Independent projects"
+  bio = "This site is the public intersection of my personal studio and personal brand. For formal employment history, please see LinkedIn."
   links = [
     { email = "mailto:pengzaimao@outlook.com" },
     { linkedin = "https://linkedin.com/in/zaimao" },
     { github = "https://github.com/zaimaopeng" },
-    { google-scholar = "https://scholar.google.com/" },
-    { researchgate = "https://www.researchgate.net/profile/Zaimao-Peng" },
   ]
