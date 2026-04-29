@@ -1,6 +1,6 @@
 ---
 title: "Home"
-description: "The public intersection of Zaimao Peng's personal studio, writing, and brand."
+description: "The public entry point for Zaimao Peng's personal studio, viewpoint essays, and technical logs."
 ---
 
-This is the public intersection of my personal studio and personal brand: notes, essays, experiments, and small projects that I want to shape in public. Formal employment history lives on LinkedIn; this site is for the things I choose to make and think through under my own name.
+This is the public intersection of my personal studio and personal brand. I split the writing into two lanes: viewpoint essays about my own worldview and long-running questions, and studio technical logs that record what we built, repaired, and learned inside OpenClaw, Codex, automation, and local AI systems.

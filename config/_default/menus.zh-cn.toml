@@ -4,6 +4,16 @@
   weight = 10
 
 [[main]]
+  name = "观点"
+  url = "/zh-cn/blog/#viewpoints"
+  weight = 11
+
+[[main]]
+  name = "技术日志"
+  url = "/zh-cn/blog/#studio-logs"
+  weight = 12
+
+[[main]]
   name = "关于"
   pageRef = "about"
   weight = 20

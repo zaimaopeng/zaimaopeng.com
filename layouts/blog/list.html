@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <header class="blog-list-header">
+    {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <p class="blog-list-header__eyebrow">{{ if eq .Site.Language.Lang "zh-cn" }}博客导航{{ else }}Blog guide{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="blog-list-header__content prose dark:prose-invert">
+      {{ .Content }}
+    </div>
+  </header>
+
+  {{ partial "blog/curated-sections.html" (dict "context" . "mode" "list") }}
+{{ end }}

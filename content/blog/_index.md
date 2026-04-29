@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-description: "Essays and notes from Zaimao Peng's personal studio."
+description: "Zaimao Peng's viewpoint essays, core worldview, and studio technical logs."
 cascade:
   showDate: true
   showAuthor: true
@@ -10,4 +10,4 @@ cascade:
   heroStyle: "basic"
 ---
 
-Essays and notes from my personal studio: AI, writing, tools, systems, and the small observations that become clearer when I try to make things in public.
+The writing here is split into two lanes: viewpoint essays for my own judgments, values, and long-running questions; and studio technical logs for what we built, repaired, and learned inside OpenClaw, Codex, automation, and local AI systems.

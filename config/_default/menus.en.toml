@@ -6,6 +6,16 @@
   weight = 10
 
 [[main]]
+  name = "Viewpoints"
+  url = "/blog/#viewpoints"
+  weight = 11
+
+[[main]]
+  name = "Studio Logs"
+  url = "/blog/#studio-logs"
+  weight = 12
+
+[[main]]
   name = "About"
   pageRef = "about"
   weight = 20

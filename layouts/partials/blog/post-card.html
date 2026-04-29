@@ -1,0 +1,25 @@
+{{ $page := .page }}
+{{ $variant := .variant | default "row" }}
+{{ $isZh := .isZh | default false }}
+{{ $dateFormat := cond $isZh "2006年1月2日" "2 January 2006" }}
+
+<article class="blog-curation__post blog-curation__post--{{ $variant }}">
+  <div class="blog-curation__meta">
+    <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date | time.Format $dateFormat }}</time>
+    {{ if gt $page.ReadingTime 0 }}
+      <span>{{ $page.ReadingTime }} {{ if $isZh }}分钟{{ else }}min{{ end }}</span>
+    {{ end }}
+    {{ with $page.GetTerms "categories" }}
+      {{ with index . 0 }}
+        <span>{{ .LinkTitle }}</span>
+      {{ end }}
+    {{ end }}
+  </div>
+  <h3>
+    <a href="{{ $page.RelPermalink }}">{{ $page.Title | emojify }}</a>
+  </h3>
+  {{ $summary := $page.Params.description | default ($page.Summary | plainify) }}
+  {{ with $summary }}
+    <p>{{ . }}</p>
+  {{ end }}
+</article>

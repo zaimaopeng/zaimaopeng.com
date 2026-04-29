@@ -1,0 +1,27 @@
+# Curated homepage/blog lanes.
+# Add a post slug here when a technical-category article should be treated as
+# a worldview/viewpoint essay instead of a studio log.
+worldview = [
+  "life-as-open-source-project",
+  "deep-work-is-not-obsolete-in-the-ai-era",
+  "deliberate-cultivation",
+  "personal-site-studio-brand-refresh",
+]
+
+viewpoints = [
+  "hello-world",
+  "life-as-open-source-project",
+  "deep-work-is-not-obsolete-in-the-ai-era",
+  "deliberate-cultivation",
+  "personal-site-studio-brand-refresh",
+  "why-humanity-protects-books",
+  "ai-scales-expert-skill-not-information",
+]
+
+viewpointCategories = [
+  "Reflection",
+  "思考",
+  "Culture",
+  "文化",
+  "Personal Studio",
+]

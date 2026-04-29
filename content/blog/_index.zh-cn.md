@@ -1,6 +1,6 @@
 ---
 title: "博客"
-description: "来自彭在茂个人 studio 的文章和记录。"
+description: "彭在茂的观点文章、核心世界观和 Studio 技术日志。"
 cascade:
   showDate: true
   showAuthor: true
@@ -10,4 +10,4 @@ cascade:
   heroStyle: "basic"
 ---
 
-来自我个人 studio 的文章和记录：AI、写作、工具、系统，以及那些只有在我真的动手做东西时才会变清楚的小观察。
+这里的文章分成两条线：观点文章主要表达我自己的判断、价值观和长期问题；Studio 技术日志则记录 OpenClaw、Codex、自动化和本地 AI 工作系统里真实发生的建设、修补和复盘。

@@ -1,0 +1,105 @@
+{{ $ctx := .context }}
+{{ $mode := .mode | default "home" }}
+{{ $isList := eq $mode "list" }}
+{{ $isZh := eq $ctx.Site.Language.Lang "zh-cn" }}
+{{ $posts := (where $ctx.Site.RegularPages "Section" "blog").ByDate.Reverse }}
+{{ $laneConfig := site.Data.blog_lanes }}
+{{ $worldviewSlugs := $laneConfig.worldview | default (slice) }}
+{{ $viewpointSlugs := $laneConfig.viewpoints | default (slice) }}
+{{ $viewpointCategories := $laneConfig.viewpointCategories | default (slice) }}
+{{ $worldview := slice }}
+{{ $viewpoints := slice }}
+{{ $studioLogs := slice }}
+
+{{ range $posts }}
+  {{ $slug := .Params.slug | default (replaceRE "^.*/blog/([^/]+)/?$" "$1" .RelPermalink) }}
+  {{ $isWorldview := in $worldviewSlugs $slug }}
+  {{ $isViewpoint := or $isWorldview (in $viewpointSlugs $slug) }}
+  {{ if not $isViewpoint }}
+    {{ range .GetTerms "categories" }}
+      {{ if in $viewpointCategories .LinkTitle }}
+        {{ $isViewpoint = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if $isWorldview }}
+    {{ $worldview = $worldview | append . }}
+  {{ end }}
+  {{ if $isViewpoint }}
+    {{ $viewpoints = $viewpoints | append . }}
+  {{ else }}
+    {{ $studioLogs = $studioLogs | append . }}
+  {{ end }}
+{{ end }}
+
+{{ $worldviewItems := first 4 $worldview }}
+{{ $viewpointItems := first 4 $viewpoints }}
+{{ $studioItems := first 6 $studioLogs }}
+{{ if $isList }}
+  {{ $worldviewItems = $worldview }}
+  {{ $viewpointItems = $viewpoints }}
+  {{ $studioItems = $studioLogs }}
+{{ end }}
+
+<div class="blog-curation blog-curation--{{ $mode }}">
+  {{ if gt (len $worldviewItems) 0 }}
+    <section class="blog-curation__worldview" id="worldview" aria-labelledby="worldview-title">
+      <div class="blog-curation__heading">
+        <p class="blog-curation__eyebrow">{{ if $isZh }}核心世界观{{ else }}Core worldview{{ end }}</p>
+        <h2 id="worldview-title">{{ if $isZh }}先读这些，理解我怎么看世界{{ else }}Start here to understand how I see the world{{ end }}</h2>
+        <p>
+          {{ if $isZh }}
+            这些文章更接近我的底层判断：时间、创造、AI、注意力，以及我为什么愿意把人生和工作当成一个持续迭代的项目。
+          {{ else }}
+            These essays carry the deeper frame: time, creation, AI, attention, and why I treat life and work as projects that can keep evolving.
+          {{ end }}
+        </p>
+      </div>
+      <div class="blog-curation__spotlight-grid">
+        {{ range $worldviewItems }}
+          {{ partial "blog/post-card.html" (dict "page" . "variant" "spotlight" "isZh" $isZh) }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  <section class="blog-curation__lanes" aria-label="{{ if $isZh }}文章分区{{ else }}Writing lanes{{ end }}">
+    <div class="blog-curation__lane" id="viewpoints">
+      <div class="blog-curation__lane-head">
+        <p class="blog-curation__eyebrow">{{ if $isZh }}观点文章{{ else }}Viewpoint essays{{ end }}</p>
+        <h2>{{ if $isZh }}我的判断、价值观和长期问题{{ else }}My judgments, values, and long-running questions{{ end }}</h2>
+        <p>
+          {{ if $isZh }}
+            这部分主要是我以第一人称写下的观点：我相信什么、反对什么、正在怎样修正自己的判断。
+          {{ else }}
+            This lane is written in my own voice: what I believe, what I push against, and how my judgment is changing.
+          {{ end }}
+        </p>
+      </div>
+      <div class="blog-curation__post-list">
+        {{ range $viewpointItems }}
+          {{ partial "blog/post-card.html" (dict "page" . "variant" "row" "isZh" $isZh) }}
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="blog-curation__lane" id="studio-logs">
+      <div class="blog-curation__lane-head">
+        <p class="blog-curation__eyebrow">{{ if $isZh }}Studio 技术日志{{ else }}Studio technical logs{{ end }}</p>
+        <h2>{{ if $isZh }}旁观式记录：我们做了什么{{ else }}Observer notes on what we built{{ end }}</h2>
+        <p>
+          {{ if $isZh }}
+            这部分更像工作室日志：记录 OpenClaw、Codex、自动化和本地 AI 工作系统里的真实修补、实验与复盘。
+          {{ else }}
+            This lane is closer to a studio log: repairs, experiments, and retrospectives from OpenClaw, Codex, automation, and local AI systems.
+          {{ end }}
+        </p>
+      </div>
+      <div class="blog-curation__post-list">
+        {{ range $studioItems }}
+          {{ partial "blog/post-card.html" (dict "page" . "variant" "row" "isZh" $isZh) }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</div>

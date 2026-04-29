@@ -1,32 +1,33 @@
 {{ $isZh := eq .Site.Language.Lang "zh-cn" }}
 {{ $posts := where .Site.RegularPages "Section" "blog" }}
-{{ $latest := first (.Site.Params.homepage.showRecentItems | default 7) $posts }}
-{{ $featured := false }}
-{{ with $latest }}
-  {{ $featured = index . 0 }}
-{{ end }}
 
 <div class="blog-home">
   <section class="blog-home__intro" aria-labelledby="home-title">
     <div class="blog-home__copy">
       <p class="blog-home__eyebrow">{{ if $isZh }}个人 Studio{{ else }}Personal studio{{ end }}</p>
       <h1 id="home-title">
-        {{ if $isZh }}彭在茂的 Studio{{ else }}Zaimao Peng Studio{{ end }}
+        {{ if $isZh }}
+          <span>观点和工作记录，</span>
+          <span>分开读</span>
+        {{ else }}
+          <span>Essays and studio logs,</span>
+          <span>separated</span>
+        {{ end }}
       </h1>
       <div class="blog-home__lede">
         {{ .Content }}
       </div>
       <div class="blog-home__actions" aria-label="{{ if $isZh }}主要链接{{ else }}Primary links{{ end }}">
-        <a class="blog-home__primary-link" href="{{ "blog/" | relLangURL }}">
-          {{ if $isZh }}阅读最新文章{{ else }}Read the latest posts{{ end }}
+        <a class="blog-home__primary-link" href="#worldview">
+          {{ if $isZh }}先看核心世界观{{ else }}Start with the worldview{{ end }}
         </a>
-        <a class="blog-home__secondary-link" href="{{ "about/" | relLangURL }}">
-          {{ if $isZh }}关于作者{{ else }}About the author{{ end }}
+        <a class="blog-home__secondary-link" href="{{ "blog/#studio-logs" | relLangURL }}">
+          {{ if $isZh }}看 Studio 技术日志{{ else }}Read the studio logs{{ end }}
         </a>
       </div>
     </div>
 
-    <aside class="blog-home__profile" aria-label="{{ if $isZh }}作者简介{{ else }}Author profile{{ end }}">
+    <aside class="blog-home__profile" aria-label="{{ if $isZh }}站点阅读路径{{ else }}Site reading paths{{ end }}">
       {{ with .Site.Params.Author.image }}
         {{ $authorImage := resources.Get . }}
         {{ with $authorImage }}
@@ -47,59 +48,20 @@
       </div>
       <div class="blog-home__meta">
         <span>{{ len $posts }} {{ if $isZh }}篇文章{{ else }}posts{{ end }}</span>
-        <span>{{ if $isZh }}Studio / Brand / 写作{{ else }}Studio / brand / writing{{ end }}</span>
+        <span>{{ if $isZh }}观点 / 技术日志 / 写作{{ else }}Essays / technical logs / writing{{ end }}</span>
+      </div>
+      <div class="blog-home__routes">
+        <a href="{{ "blog/#viewpoints" | relLangURL }}">
+          <span>{{ if $isZh }}观点文章{{ else }}Viewpoint essays{{ end }}</span>
+          <small>{{ if $isZh }}我的判断和长期问题{{ else }}Judgment and long-running questions{{ end }}</small>
+        </a>
+        <a href="{{ "blog/#studio-logs" | relLangURL }}">
+          <span>{{ if $isZh }}Studio 技术日志{{ else }}Studio technical logs{{ end }}</span>
+          <small>{{ if $isZh }}旁观式记录真实建设{{ else }}Observer notes from real builds{{ end }}</small>
+        </a>
       </div>
     </aside>
   </section>
 
-  {{ with $featured }}
-    <section class="blog-home__featured" aria-labelledby="featured-title">
-      <div class="blog-home__section-heading">
-        <p>{{ if $isZh }}最新更新{{ else }}Latest update{{ end }}</p>
-        <a href="{{ "blog/" | relLangURL }}">{{ if $isZh }}全部文章{{ else }}All posts{{ end }}</a>
-      </div>
-      <article class="blog-home__featured-article">
-        <div class="blog-home__article-meta">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
-          {{ if gt .ReadingTime 0 }}
-            <span>{{ .ReadingTime }} {{ if $isZh }}分钟阅读{{ else }}min read{{ end }}</span>
-          {{ end }}
-        </div>
-        <h2 id="featured-title">
-          <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
-        </h2>
-        {{ with .Params.description }}
-          <p>{{ . }}</p>
-        {{ else }}
-          <p>{{ .Summary | plainify }}</p>
-        {{ end }}
-      </article>
-    </section>
-  {{ end }}
-
-  {{ if gt (len $latest) 1 }}
-    <section class="blog-home__latest" aria-labelledby="latest-title">
-      <h2 id="latest-title">{{ if $isZh }}最近文章{{ else }}Recent writing{{ end }}</h2>
-      <div class="blog-home__post-list">
-        {{ range after 1 $latest }}
-          <article class="blog-home__post">
-            <div class="blog-home__article-meta">
-              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
-              {{ with .GetTerms "categories" }}
-                {{ with index . 0 }}
-                  <span>{{ .LinkTitle }}</span>
-                {{ end }}
-              {{ end }}
-            </div>
-            <h3>
-              <a href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
-            </h3>
-            {{ with .Params.description }}
-              <p>{{ . }}</p>
-            {{ end }}
-          </article>
-        {{ end }}
-      </div>
-    </section>
-  {{ end }}
+  {{ partial "blog/curated-sections.html" (dict "context" . "mode" "home") }}
 </div>
