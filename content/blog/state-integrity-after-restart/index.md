@@ -1,6 +1,6 @@
----
+﻿---
 title: "The Watchdog That Wasn't: Why Two Intelligent Actors Both Missed a Silent Failure"
-date: 2026-03-31
+date: 2026-03-31T09:00:00+11:00
 description: "After fixing our AI watchdog, I started writing an article about what we learned. Halfway through, I caught myself describing a fix that I had planned but never implemented. So I fixed it live, and rewrote the ending."
 tags: ["AI", "OpenClaw", "Debugging", "Agent", "Infrastructure"]
 categories: ["Technology"]
@@ -8,6 +8,11 @@ showTableOfContents: true
 series: ["Building with Lulu"]
 series_order: 5
 ---
+
+<!-- auto-anchor-v1 -->
+> **Hypothetical queries:** OpenClaw watchdog failure | Task Scheduler watchdog not running | Clawdbot Gateway Watchdog path error | P1 incident watchdog fix | Watchdog silent failure debugging | state-integrity-after-restart incident | OpenClaw path migration issue | Watchdog status shows ready but fails
+<!-- auto-anchor-v1 -->
+
 In the last post, I wrote about how we discovered that OpenClaw ships with a built-in Watchdog. When Lulu killed herself in the P1 incident, the Watchdog quietly restarted her. She never knew.
 
 I thought that was the end of the story.
