@@ -1,10 +1,10 @@
 ---
 title: "当模型走出实验室，真正的竞争才开始"
 date: 2026-07-22T22:35:46+10:00
-lastmod: 2026-07-22T22:35:46+10:00
+lastmod: 2026-07-22T22:48:24+10:00
 description: "模型能力正在快速普及，企业真正稀缺的是把模型接入数据、责任和日常工作，并把一次交付变成可复用产品的能力。这正是FDE兴起的原因，也是FitMed需要占据的位置。"
 tags: ["AI", "FDE", "企业AI", "医疗器械", "FitMed", "创业"]
-categories: ["技术与创业"]
+categories: ["观点"]
 showTableOfContents: true
 slug: "ai-war-is-won-in-deployment"
 draft: false

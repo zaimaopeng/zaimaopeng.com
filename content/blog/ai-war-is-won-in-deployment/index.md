@@ -1,10 +1,10 @@
 ---
 title: "When Models Leave the Lab, the Real Competition Begins"
 date: 2026-07-22T22:35:46+10:00
-lastmod: 2026-07-22T22:35:46+10:00
+lastmod: 2026-07-22T22:48:24+10:00
 description: "Model capability is becoming abundant. What remains scarce is the ability to connect models to data, responsibility, and daily work—and turn one deployment into a reusable product. That is why FDEs matter, and where FitMed needs to position itself."
 tags: ["AI", "FDE", "Enterprise AI", "Medical Devices", "FitMed", "Startups"]
-categories: ["Technology and Entrepreneurship"]
+categories: ["Opinion"]
 showTableOfContents: true
 slug: "ai-war-is-won-in-deployment"
 draft: false
