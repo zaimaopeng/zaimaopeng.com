@@ -1,12 +1,13 @@
 ---
-title: "我不缺知识，缺的是让知识经过我一次"
+title: "知识是怎么长在一个人身上的"
 date: 2026-08-15T00:31:55+10:00
-lastmod: 2026-08-15T00:31:55+10:00
+lastmod: 2026-08-17T23:37:30+10:00
 description: "听懂和收藏当然有价值，但一个观点只有经过自己的解释、怀疑和选择，才可能真正参与塑造一个人。"
 tags: ["学习", "写作", "知识", "生成", "个人成长"]
 categories: ["思考"]
 showTableOfContents: false
-showReadingTime: false
+showReadingTime: true
+isCJKLanguage: true
 slug: "let-knowledge-pass-through-me"
 draft: false
 ---
